@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Master</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #c3dafe, #ebf4ff);
+      padding: 40px;
+    }
+
+    .back-button {
+      max-width: 650px;
+      margin: 20px 20px auto;
+      text-align: left;
+    }
+
+    .back-button button {
+      background: linear-gradient(to right, #718096, #4a5568);
+      color: white;
+      padding: 10px 24px;
+      font-size: 16px;
+      font-weight: bold;
+       border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button button:hover {
+      background: linear-gradient(to right, #a0aec0, #2d3748);
+      transform: scale(1.03);
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2d3748;
+      font-size: 26px;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: black;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9fafb;
+      transition: all 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #667eea;
+      background-color: #fff;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background: linear-gradient(to right, #344aad, #0a0114);
+      color: white;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 8px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background: #2a2a2a;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .back-button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="back-button">
+    <button onclick="history.back()">← Back</button>
+  </div>
+
+  <div class="container">
+    <h2>Project Master</h2>
+    <form action="/submit_project/" method="POST">
+
+      <label for="project_name">Project Name:</label>
+      <input type="text" id="project_name" name="project_name" required>
+
+      <label for="customer_name">Customer Name:</label>
+      <input type="text" id="customer_name" name="customer_name" required>
+
+      <label for="project_description">Project Description:</label>
+      <textarea id="project_description" name="project_description" required></textarea>
+
+      <label for="deadline">Deadline:</label>
+      <input type="date" id="deadline" name="deadline" required>
+
+      <div class="button-group">
+        <input type="submit" value="Submit">
+        <!-- <input type="reset" value="Clear"> -->
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

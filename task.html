@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Master</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #c3dafe, #ebf4ff);
+      padding: 40px;
+    }
+
+    .back-button {
+      max-width: 650px;
+      margin:20px 20px auto;
+      text-align: left;
+    }
+
+    .back-button button {
+      background: linear-gradient(to right, #718096, #4a5568);
+      color: white;
+      padding: 10px 24px;
+      font-size: 16px;
+      font-weight: bold;
+        border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button button:hover {
+      background: linear-gradient(to right, #a0aec0, #2d3748);
+      transform: scale(1.03);
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 26px;
+      color: #2d3748;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: black;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9fafb;
+      transition: all 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #667eea;
+      background-color: #fff;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background: linear-gradient(to right, #344aad, #0a0114);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background: #2a2a2a;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .back-button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="back-button">
+    <button onclick="history.back()">← Back</button>
+  </div>
+
+  <div class="container">
+    <h2>Task Master</h2>
+    <form action="" method="POST">
+
+      <div class="form-group">
+        <label for="project_name">Project Name</label>
+        <input type="text" id="project_name" name="project_name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="task_name">Task</label>
+        <input type="text" id="task_name" name="task_name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" name="status" required>
+          <option value="">-- Select Status --</option>
+          <option value="Not Started">Not Started</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+          <option value="On Hold">On Hold</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" name="start_date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="due_date">Due Date</label>
+        <input type="date" id="due_date" name="due_date" required>
+      </div>
+
+      <div class="button-group">
+        <input type="submit" value="Submit">
+        <!-- <input type="reset" value="Reset"> -->
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
