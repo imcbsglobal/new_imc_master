@@ -9,10 +9,35 @@
       background: #f2f2f2;
       padding: 30px;
     }
+
     h2 {
       text-align: center;
       margin-bottom: 20px;
     }
+
+    .top-bar {
+      width: 95%;
+      margin: 0 auto 15px auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .top-bar button {
+      background: linear-gradient(to right, #344aad, #0a0114);
+      color: white;
+      padding: 10px 20px;
+      font-size: 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .top-bar button:hover {
+      background: #2a2a2a;
+      transform: scale(1.03);
+    }
+
     table {
       width: 95%;
       margin: auto;
@@ -20,46 +45,53 @@
       background: #fff;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     th, td {
       padding: 12px 15px;
       border: 1px solid #ccc;
       text-align: center;
     }
+
     th {
       background-color: #e9f1ff;
     }
+
     tr:hover {
       background-color: #f5faff;
     }
   </style>
 </head>
 <body>
+ <div class="top-bar">
+    <button onclick="location.href='project_form.html'">Add New</button>
+  </div>
 
   <h2>Project Master</h2>
+
+ 
 
   <table>
     <tr>
       <th>Project Name</th>
       <th>Customer Name</th>
       <th>Project Description</th>
-      
+      <th>Project Members</th>
       <th>Deadline</th>
     </tr>
     <tr>
       <td>Inventory System</td>
       <td>ABC Enterprises</td>
       <td>Web-based inventory tracking solution</td>
-      
+      <td>Sajith, Sona</td>
       <td>2025-07-31</td>
     </tr>
     <tr>
       <td>Billing App</td>
       <td>XYZ Stores</td>
       <td>Android billing application with QR</td>
-      
+      <td>John, Ann</td>
       <td>2025-08-10</td>
     </tr>
-   
   </table>
 
 </body>

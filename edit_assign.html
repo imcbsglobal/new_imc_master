@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Assigned Task</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #c3dafe, #ebf4ff);
+      padding: 50px;
+    }
+
+    .back-button {
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .back-button button {
+      background: linear-gradient(to right, #718096, #4a5568);
+      color: #fff;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button button:hover {
+      background: linear-gradient(to right, #a0aec0, #2d3748);
+      transform: scale(1.03);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1a202c;
+      font-size: 26px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: black;
+    }
+
+    select,
+    input[type="date"],
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #cbd5e0;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #f7fafc;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    select:focus,
+    input:focus,
+    textarea:focus {
+      border-color: #667eea;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+      background-color: #fff;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(to right, #344aad, #0a0114);
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(to right, #5a67d8, #6b46c1);
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+<div class="back-button">
+  <button onclick="history.back()">← Back</button>
+</div>
+
+<div class="container">
+  <h2>Edit Assigned Task</h2>
+  <form action="/edit_assign/" method="POST">
+    <div class="form-group">
+      <label for="project_name">Project Name</label>
+      <select id="project_name" name="project_name" required>
+        <option value="">-- Select Project --</option>
+        <option value="vcaremart" selected>Vcaremart</option>
+        <option value="Imc">Imc</option>
+        <option value="Sysmac">Sysmac</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="task_name">Task</label>
+      <select id="task_name" name="task_name" required>
+        <option value="">-- Select Task --</option>
+        <option value="Design UI" selected>Design UI</option>
+        <option value="Testing">Testing</option>
+        <option value="Documentation">Documentation</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="assigned_to">Assign To</label>
+      <select id="assigned_to" name="assigned_to" required>
+        <option value="">-- Select Person --</option>
+        <option value="John Doe" selected>John Doe</option>
+        <option value="Jane Smith">Jane Smith</option>
+        <option value="David Lee">David Lee</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="assigned_by">Assign By</label>
+      <select id="assigned_by" name="assigned_by" required>
+        <option value="">-- Select Person --</option>
+        <option value="Admin" selected>Admin</option>
+        <option value="Project Manager">Project Manager</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="deadline">Deadline</label>
+      <input type="date" id="deadline" name="deadline" value="2025-08-01" required>
+    </div>
+
+    <div class="button-group">
+      <input type="submit" value="Update">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
