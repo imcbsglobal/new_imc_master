@@ -20,7 +20,7 @@
     .container {
       max-width: 650px;
       margin: auto;
-      background: #ffffff;
+      background: white;
       padding: 40px 30px;
       border-radius: 15px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -34,7 +34,7 @@
     h2 {
       text-align: center;
       margin-bottom: 30px;
-      color: #2d3748;
+      color: black;
       font-size: 26px;
     }
 
@@ -220,7 +220,7 @@
     const memberTags = document.getElementById("memberTags");
     const hiddenInput = document.getElementById("project_members");
 
-    let members = ["Sajith", "Sona"]; // pre-filled existing members
+    let members = ["Sajith", "Sona"]; 
 
     memberInput.addEventListener("keydown", function (e) {
       if (e.key === "Enter" && memberInput.value.trim() !== "") {
@@ -258,10 +258,8 @@
     }
 
     function handleSubmit(e) {
-      updateTags(); // update before submit
+      updateTags(); 
     }
-
-    // Initialize with existing members
     updateTags();
   </script>
 

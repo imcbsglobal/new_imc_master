@@ -61,6 +61,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      font-size: 14px;
     }
 
     th, td {
@@ -72,7 +73,7 @@
     th {
       background-color: #f0f4f8;
       color: black;
-      font-size: 25px;
+      font-size: 16px;
       font-weight: 600;
     }
 
@@ -93,7 +94,7 @@
       cursor: pointer;
       background-color: #fefcbf;
       color: orange;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .dropdown-content {
@@ -115,7 +116,7 @@
       border: none;
       text-align: left;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
       transition: background-color 0.3s ease;
     }
 
@@ -164,7 +165,10 @@
       td:nth-child(2)::before { content: "Project"; }
       td:nth-child(3)::before { content: "Task"; }
       td:nth-child(4)::before { content: "Assign To"; }
-      td:nth-child(5)::before { content: "Status"; }
+      td:nth-child(5)::before { content: "Created Date"; }
+      td:nth-child(6)::before { content: "Start Time"; }
+      td:nth-child(7)::before { content: "End Time"; }
+      td:nth-child(8)::before { content: "Status"; }
     }
   </style>
 </head>
@@ -181,18 +185,26 @@
       <thead>
         <tr>
           <th>No</th>
+          <th>Created Date</th>
           <th>Project</th>
           <th>Task</th>
           <th>Assign By</th>
+          
+          <th>Start Time</th>
+          <th>End Time</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1</td>
+          <td>2025-07-01</td>
           <td>Website Redesign</td>
           <td>Logo Creation</td>
           <td>John</td>
+          
+          <td>10:00 AM</td>
+          <td>12:00 PM</td>
           <td>
             <div class="status-dropdown">
               <button class="status-btn inprogress" onclick="toggleDropdown(event)">In Progress</button>
@@ -207,9 +219,13 @@
         </tr>
         <tr>
           <td>2</td>
+          <td>2025-07-02</td>
           <td>Website Reading</td>
           <td>Poster Creation</td>
           <td>Jose</td>
+          
+          <td>2:00 PM</td>
+          <td>5:00 PM</td>
           <td>
             <div class="status-dropdown">
               <button class="status-btn inprogress" onclick="toggleDropdown(event)">In Progress</button>
@@ -224,9 +240,13 @@
         </tr>
         <tr>
           <td>3</td>
+          <td>2025-07-03</td>
           <td>Website Redesign</td>
-          <td>design</td>
+          <td>Design</td>
           <td>Aswathy</td>
+          
+          <td>11:00 AM</td>
+          <td>2:00 PM</td>
           <td>
             <div class="status-dropdown">
               <button class="status-btn inprogress" onclick="toggleDropdown(event)">In Progress</button>
@@ -239,7 +259,6 @@
             </div>
           </td>
         </tr>
-        <!-- Repeat rows as needed -->
       </tbody>
     </table>
   </div>

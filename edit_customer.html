@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Customers Details</title>
+  <title>Edit Customers Details</title>
   <style>
     * {
       box-sizing: border-box;
@@ -114,8 +114,7 @@
       transition: background 0.3s ease, transform 0.2s ease;
     }
 
-    button[type="submit"],
-    button[type="reset"] {
+    button[type="submit"] {
       background: linear-gradient(to right, #344aad, #0a0114);
       color: white;
     }
@@ -149,21 +148,21 @@
   </div>
 
   <div class="container">
-    <h1>Customers Details</h1>
-    <form id="customerForm">
+    <h1>Edit Customers Details</h1>
+    <form id="updateCustomerForm" method="POST" action="/update_customer">
       <div class="form-group">
         <label for="customerName">Customer Name</label>
-        <input type="text" id="customerName" name="customerName" required>
+        <input type="text" id="customerName" name="customerName" value="John Doe" required>
       </div>
 
       <div class="form-group">
         <label for="firmName">Firm Name</label>
-        <input type="text" id="firmName" name="firmName" required>
+        <input type="text" id="firmName" name="firmName" value="Doe Enterprises" required>
       </div>
 
       <div class="form-group">
         <label for="place">Place</label>
-        <input type="text" id="place" name="place" required>
+        <input type="text" id="place" name="place" value="Kochi" required>
       </div>
 
       <div class="form-group">
@@ -171,35 +170,25 @@
         <select id="district" name="district" required>
           <option value="">-- Select District --</option>
           <option value="Alappuzha">Alappuzha</option>
-          <option value="Ernakulam">Ernakulam</option>
+          <option value="Ernakulam" selected>Ernakulam</option>
           <option value="Idukki">Idukki</option>
-          <option value="Kannur">Kannur</option>
-          <option value="Kasaragod">Kasaragod</option>
-          <option value="Kollam">Kollam</option>
-          <option value="Kottayam">Kottayam</option>
-          <option value="Kozhikode">Kozhikode</option>
-          <option value="Malappuram">Malappuram</option>
-          <option value="Palakkad">Palakkad</option>
-          <option value="Pathanamthitta">Pathanamthitta</option>
-          <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-          <option value="Thrissur">Thrissur</option>
-          <option value="Wayanad">Wayanad</option>
+          
         </select>
       </div>
 
       <div class="form-group">
         <label for="state">State</label>
-        <input type="text" id="state" name="state" required>
+        <input type="text" id="state" name="state" value="Kerala" required>
       </div>
 
       <div class="form-group">
         <label for="country">Country</label>
-        <input type="text" id="country" name="country" required>
+        <input type="text" id="country" name="country" value="India" required>
       </div>
 
       <div class="form-group">
         <label for="phone">Phone No</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone" value="9876543210" required>
       </div>
 
       <div class="form-group">
@@ -207,39 +196,35 @@
         <select id="businessType" name="businessType" required>
           <option value="">-- Select Business Type --</option>
           <option value="Retail">Retail</option>
-          <option value="Wholesale">Wholesale</option>
+          <option value="Wholesale" selected>Wholesale</option>
           <option value="Distributor">Distributor</option>
           <option value="Manufacturer">Manufacturer</option>
           <option value="Service">Service</option>
           <option value="Other">Other</option>
         </select>
       </div>
-
       <div class="form-group">
         <label for="contactPerson">Contact Person</label>
-        <input type="text" id="contactPerson" name="contactPerson" required>
+        <input type="text" id="contactPerson" name="contactPerson" value="Jane Smith" required>
       </div>
-
       <div class="form-group">
         <label for="phone1">Phone No 1</label>
-        <input type="tel" id="phone1" name="phone1" required>
+        <input type="tel" id="phone1" name="phone1" value="9876543211" required>
       </div>
-
       <div class="form-group">
         <label for="phone2">Phone No 2</label>
-        <input type="tel" id="phone2" name="phone2" required>
+        <input type="tel" id="phone2" name="phone2" value="9876543212" required>
       </div>
 
       <div class="form-group">
         <label for="email">Email ID</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" value="john@example.com" required>
       </div>
 
       <div class="form-buttons">
-        <button type="submit">Save</button>
+        <button type="submit">Update</button>
       </div>
     </form>
   </div>
-
 </body>
 </html>
